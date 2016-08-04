@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Tool Info</h1>
+      <% @tools.each do |tool| %>
+        <b>Tool</b>: <%= link_to tool.name, tool_path(tool) %><br>
+        <b>Quantity</b>: <%= tool.quantity %><br>
+        <b>Price</b>: $<%= tool.price %><br><br><br>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= link_to "Add a New Tool", new_tool_path %>

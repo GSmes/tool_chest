@@ -1,0 +1,13 @@
+<div class="container" id="tool_info">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2><%= @tool.name %></h2>
+      <h4><u>Quantity</u>: <%= @tool.quantity %></h4>
+      <h4><u>Price</u>: <%= @tool.price %></h4>
+    </div>
+  </div>
+</div>
+
+<%= link_to "Edit Tool", edit_tool_path %>
+<br>
+<%= link_to "Delete Tool", tool_path(@tool), method: :delete %>
